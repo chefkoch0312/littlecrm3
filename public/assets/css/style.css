@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    height: 55px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    height: 85px;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+main {
+    @apply p-1;
+}
+
+.btn {
+    @apply font-bold py-2 px-2 py-1 rounded;
+}
+
+.btn-blue {
+    @apply bg-blue-500 text-white;
+}
+
+.btn-blue:hover {
+    @apply bg-blue-700;
+}

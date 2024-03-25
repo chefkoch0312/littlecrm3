@@ -1,0 +1,74 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "username": "dev01",
+      "passwort": "",
+      "email": "kai.dombrowski@web.de",
+      "vorname": "Kai",
+      "nachname": "Dombrowski"
+    },
+    {
+      "id": "2",
+      "username": "adm01",
+      "passwort": "",
+      "email": "admin@localhost",
+      "vorname": "admin",
+      "nachname": "admin"
+    }
+  ],
+  "customer": [
+    {
+      "id": "1",
+      "firma": "",
+      "anrede": "herr",
+      "vorname": "peter",
+      "nachname": "lustig",
+      "strasse": "hier-str. 1",
+      "plz": "12345",
+      "ort": "hier",
+      "tel": "12345",
+      "email": "p.lustig@locaho.st"
+    },
+    {
+      "id": "2",
+      "firma": "",
+      "anrede": "frau",
+      "vorname": "petra",
+      "nachname": "musterfrau",
+      "strasse": "dort weg 2a",
+      "plz": "12345",
+      "ort": "dort",
+      "tel": "12345",
+      "email": "pm@gibts.net"
+    },
+    {
+      "id": "3",
+      "firma": "firma",
+      "anrede": "",
+      "vorname": "",
+      "nachname": "",
+      "strasse": "sonst-wo 1",
+      "plz": "12480",
+      "ort": "überall",
+      "tel": "",
+      "email": "kontakt@blubb.de"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "1",
+      "kunden_id": "1",
+      "mitarbeiter_id": "1",
+      "termin": "2024-03-24T14:53:40.607Z",
+      "bemerkung": "kunde kommt immer zu spät"
+    },
+    {
+      "id": "2",
+      "kunden_id": "2",
+      "mitarbeiter_id": "1",
+      "termin": "2024-03-24T14:53:40.607Z",
+      "bemerkung": "unter vorbehalt"
+    }
+  ]
+}
