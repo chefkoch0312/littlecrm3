@@ -1,35 +1,13 @@
 import React from 'react'
+import EditForm from './EditForm'
 
-async function getData(id) {
-    // throw new Error('Simulierter Fehler beim Abrufen der Kunden-Daten');
-    const res = await fetch('http://localhost:4000/customer/' + id);
-    if (!res.ok) {
-        throw new Error('Failed to fetch data...')
-    }
-    return res.json()
-}
-
-export default async function Page({ params: { id } }) {
-    const tmpData = await getData(id);
+export default function page({ params: { id } }) {
     return (
-        <>
-            <div>
-                <h2>Kunde:</h2>
-                <div>{
-
-                    < div className="">
-                        <h3>{tmpData.title}</h3>
-                        <p>{tmpData.vorname}</p>
-                        <p>{tmpData.nachname}</p>
-                        <p>{tmpData.strasse}</p>
-                        <p>{tmpData.plz}</p>
-                        <p>{tmpData.ort}</p>
-                        <p>{tmpData.tel}</p>
-                        <p>{tmpData.email}</p>
-                    </div>
-
-                }</div>
-            </div >
-        </>
+        <div>
+            <main>
+                <h2>Kunde (Nr. {id}) bearbeiten</h2>
+                <EditForm id={id} />
+            </main>
+        </div>
     )
 }
