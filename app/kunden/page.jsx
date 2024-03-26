@@ -5,7 +5,7 @@ let mySearch = "";
 
 async function getData() {
     // await new Promise(resolve => setTimeout(resolve, 1000));
-    await new Promise(resolve => setTimeout(resolve, 15000));
+    // await new Promise(resolve => setTimeout(resolve, 5000));
     // throw new Error('Simulierter Fehler beim Abrufen der Kunden-Daten');
 
     const res = await fetch('http://localhost:4000/customer/', {
@@ -16,7 +16,6 @@ async function getData() {
     if (!res.ok) {
         throw new Error('Failed to fetch data')
     }
-
     return res.json()
 }
 
@@ -42,25 +41,37 @@ export default async function Page() {
                     <div className="ml-5">
                         <Link className="btn btn-blue" href="/kunden/kunde/create">Neu</Link>
                     </div>
+                    <hr />
                 </div>
-                <div>{
-                    tmpData.map((tmpD) => (
-                        <div key={tmpD.id} >
-                            <Link href={`/kunden/kunde/${tmpD.id}`}>
-                                <h3>
-                                    {tmpD.firma}
-                                </h3>
-                                {tmpD.vorname}
-                                {tmpD.nachname}
-                                {tmpD.strasse}
-                                {tmpD.plz}
-                                {tmpD.ort}
-                                {tmpD.tel}
-                                {tmpD.email}
-                            </Link>
-                        </div>
-                    ))
-                }</div>
+
+                <div className="grid-container">
+                    <div className="font-bold">ID</div>
+                    <div className="font-bold">Firma</div>
+                    <div className="font-bold">Vorname</div>
+                    <div className="font-bold">Nachname</div>
+                    <div className="font-bold">Strasse</div>
+                    <div className="font-bold">PLZ</div>
+                    <div className="font-bold">Ort</div>
+                    <div className="font-bold">Tel.</div>
+                    <div className="font-bold">Email</div>
+
+                    {
+                        tmpData.map((tmpD) => (
+                            <React.Fragment key={tmpD.id}>
+                                <Link href={`/kunden/kunde/${tmpD.id}`}><div>{tmpD.id}</div></Link>
+                                <Link href={`/kunden/kunde/${tmpD.id}`}><div>{tmpD.firma}</div></Link>
+                                <Link href={`/kunden/kunde/${tmpD.id}`}><div>{tmpD.vorname}</div></Link>
+                                <Link href={`/kunden/kunde/${tmpD.id}`}><div>{tmpD.nachname}</div></Link>
+                                <Link href={`/kunden/kunde/${tmpD.id}`}><div>{tmpD.strasse}</div></Link>
+                                <Link href={`/kunden/kunde/${tmpD.id}`}><div>{tmpD.plz}</div></Link>
+                                <Link href={`/kunden/kunde/${tmpD.id}`}><div>{tmpD.ort}</div></Link>
+                                <Link href={`/kunden/kunde/${tmpD.id}`}><div>{tmpD.tel}</div></Link>
+                                <Link href={`/kunden/kunde/${tmpD.id}`}><div>{tmpD.email}</div></Link>
+                            </React.Fragment>
+                        ))
+                    }
+                </div>
+
             </div >
         </>
     )

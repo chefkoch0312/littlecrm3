@@ -10,7 +10,7 @@ export default function Error({ error, reset }) {
     return (
         <div>
             <h2>Ein Fehler ist aufgetreten!</h2>
-            <p className="mb-5">Leider können die Daten des Kunden nicht angezeigt werden.</p>
+            <p className="mb-5">Leider können die gewünschten Daten nicht angezeigt werden.</p>
             <button className="btn btn-blue" onClick={() => reset()}>
                 Reload...
             </button>

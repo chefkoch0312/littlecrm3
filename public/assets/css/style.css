@@ -45,3 +45,9 @@ h1 {
 h2 {
     @apply text-stone-700 text-lg font-bold;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 10px;
+}
