@@ -6,12 +6,13 @@ let mySearch = "";
 async function getData() {
     await new Promise(resolve => setTimeout(resolve, 5000));
 
+    // throw new Error('Simulierter Fehler beim Abrufen der Kunden-Daten');
+
     const res = await fetch('http://localhost:4000/customer/', {
         next: {
             revalidate: 0
         }
     });
-    // throw new Error('Simulierter Fehler beim Abrufen der Kunden-Daten');
     if (!res.ok) {
         throw new Error('Failed to fetch data')
     }
@@ -34,8 +35,13 @@ export default async function Page() {
         <>
             <div>
                 <h2>Kunden-Übersicht:</h2>
-                <div className="mb-2 ">
-                    Suche: <input className="border-dotted border-2 border-green-400" type="text" />
+                <div className="flex">
+                    <div className="mb-2 ">
+                        Suche: <input className="border-solid border-2 border-green-500" type="text" />
+                    </div>
+                    <div className="ml-5">
+                        <Link className="btn btn-blue" href="/kunden/kunde/create">Neu</Link>
+                    </div>
                 </div>
                 <div>{
                     tmpData.map((tmpD) => (

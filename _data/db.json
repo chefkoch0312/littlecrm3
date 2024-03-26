@@ -161,6 +161,18 @@
       "ort": "dort",
       "tel": "12345",
       "email": "pm@gibts.net"
+    },
+    {
+      "id": "34d6",
+      "firma": "test-firma",
+      "anrede": "test-anrede",
+      "vorname": "test-vorname",
+      "nachname": "test-nachname",
+      "strasse": "test-strasse",
+      "plz": "test-plz",
+      "ort": "test-ort",
+      "tel": "test-tel",
+      "email": "test-email"
     }
   ],
   "appointments": [

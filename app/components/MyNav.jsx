@@ -15,6 +15,7 @@ export default function MyNav() {
                     <li className=""><Link href="/info">Info</Link></li>
                     <li className=""><Link href="/">Login/Register</Link></li>
                     <li className=""><Link href="/LINKFEHLER">Link-Fehler</Link></li>
+                    <li className=""><Link href="/testing">Testing</Link></li>
                 </ul>
             </div>
         </nav>
