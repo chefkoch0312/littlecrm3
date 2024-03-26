@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 
 export default function MyNav() {
     const pathname = usePathname();
-    console.log(pathname);
     return (
         <nav>
             <div className="flex flex-row space-x-2 pl-3 pt-2 ">

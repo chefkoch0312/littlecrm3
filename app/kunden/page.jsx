@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-// import styles from '/app/page.module.css'
 
 let mySearch = "";
 
@@ -12,6 +11,7 @@ async function getData() {
             revalidate: 0
         }
     });
+    // throw new Error('Simulierter Fehler beim Abrufen der Kunden-Daten');
     if (!res.ok) {
         throw new Error('Failed to fetch data')
     }
