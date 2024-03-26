@@ -1,6 +1,7 @@
 import React from 'react'
 
 async function getData(id) {
+    // throw new Error('Simulierter Fehler beim Abrufen der Kunden-Daten');
     const res = await fetch('http://localhost:4000/customer/' + id);
     if (!res.ok) {
         throw new Error('Failed to fetch data...')

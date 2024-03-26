@@ -29,6 +29,30 @@
       "ort": "hier",
       "tel": "12345",
       "email": "p.lustig@locaho.st"
+    },
+    {
+      "id": "3ec6",
+      "firma": "1",
+      "anrede": "1",
+      "vorname": "1",
+      "nachname": "1",
+      "strasse": "1",
+      "plz": "1",
+      "ort": "1",
+      "tel": "1",
+      "email": "1"
+    },
+    {
+      "id": "e8f8",
+      "firma": "2",
+      "anrede": "2",
+      "vorname": "2",
+      "nachname": "2",
+      "strasse": "2",
+      "plz": "2",
+      "ort": "2",
+      "tel": "2",
+      "email": "2"
     }
   ],
   "appointments": [
