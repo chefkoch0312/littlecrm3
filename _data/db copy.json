@@ -1,0 +1,194 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "username": "dev01",
+      "passwort": "",
+      "email": "kai.dombrowski@web.de",
+      "vorname": "Kai",
+      "nachname": "Dombrowski"
+    },
+    {
+      "id": "2",
+      "username": "adm01",
+      "passwort": "",
+      "email": "admin@localhost",
+      "vorname": "admin",
+      "nachname": "admin"
+    }
+  ],
+  "customer": [
+    {
+      "id": "1",
+      "firma": "",
+      "anrede": "herr",
+      "vorname": "peter",
+      "nachname": "lustig",
+      "strasse": "hier-str. 1",
+      "plz": "12345",
+      "ort": "hier",
+      "tel": "12345",
+      "email": "p.lustig@locaho.st"
+    },
+    {
+      "id": "2",
+      "firma": "",
+      "anrede": "frau",
+      "vorname": "petra",
+      "nachname": "musterfrau",
+      "strasse": "dort weg 2a",
+      "plz": "12345",
+      "ort": "dort",
+      "tel": "12345",
+      "email": "pm@gibts.net"
+    },
+    {
+      "id": "3",
+      "firma": "firma",
+      "anrede": "",
+      "vorname": "",
+      "nachname": "",
+      "strasse": "sonst-wo 1",
+      "plz": "12480",
+      "ort": "überall",
+      "tel": "",
+      "email": "kontakt@blubb.de"
+    },
+    {
+      "id": "4",
+      "firma": "",
+      "anrede": "herr",
+      "vorname": "peter der zweite",
+      "nachname": "lustig",
+      "strasse": "hier-str. 1",
+      "plz": "12345",
+      "ort": "hier",
+      "tel": "12345",
+      "email": "p.lustig@locaho.st"
+    },
+    {
+      "id": "5",
+      "firma": "",
+      "anrede": "herr",
+      "vorname": "peter der dritte",
+      "nachname": "lustig",
+      "strasse": "hier-str. 1",
+      "plz": "12345",
+      "ort": "hier",
+      "tel": "12345",
+      "email": "p.lustig@locaho.st"
+    },
+    {
+      "id": "6",
+      "firma": "",
+      "anrede": "herr",
+      "vorname": "peter der vierte",
+      "nachname": "lustig",
+      "strasse": "hier-str. 1",
+      "plz": "12345",
+      "ort": "hier",
+      "tel": "12345",
+      "email": "p.lustig@locaho.st"
+    },
+    {
+      "id": "7",
+      "firma": "",
+      "anrede": "herr",
+      "vorname": "peter der fünfte",
+      "nachname": "lustig",
+      "strasse": "hier-str. 1",
+      "plz": "12345",
+      "ort": "hier",
+      "tel": "12345",
+      "email": "p.lustig@locaho.st"
+    },
+    {
+      "id": "8",
+      "firma": "",
+      "anrede": "frau",
+      "vorname": "petra die zweite",
+      "nachname": "musterfrau",
+      "strasse": "dort weg 2a",
+      "plz": "12345",
+      "ort": "dort",
+      "tel": "12345",
+      "email": "pm@gibts.net"
+    },
+    {
+      "id": "9",
+      "firma": "",
+      "anrede": "frau",
+      "vorname": "petra die dritte",
+      "nachname": "musterfrau",
+      "strasse": "dort weg 2a",
+      "plz": "12345",
+      "ort": "dort",
+      "tel": "12345",
+      "email": "pm@gibts.net"
+    },
+    {
+      "id": "10",
+      "firma": "",
+      "anrede": "herr",
+      "vorname": "peter der sechste",
+      "nachname": "lustig",
+      "strasse": "hier-str. 1",
+      "plz": "12345",
+      "ort": "hier",
+      "tel": "12345",
+      "email": "p.lustig@locaho.st"
+    },
+    {
+      "id": "11",
+      "firma": "",
+      "anrede": "herr",
+      "vorname": "peter",
+      "nachname": "lustig",
+      "strasse": "hier-str. 1",
+      "plz": "12345",
+      "ort": "hier",
+      "tel": "12345",
+      "email": "p.lustig@locaho.st"
+    },
+    {
+      "id": "12",
+      "firma": "",
+      "anrede": "frau",
+      "vorname": "petra die vierte",
+      "nachname": "musterfrau",
+      "strasse": "dort weg 2a",
+      "plz": "12345",
+      "ort": "dort",
+      "tel": "12345",
+      "email": "pm@gibts.net"
+    },
+    {
+      "id": "fa70",
+      "firma": "1",
+      "anrede": "1",
+      "vorname": "1",
+      "nachname": "1",
+      "strasse": "1",
+      "plz": "1",
+      "ort": "1",
+      "tel": "1",
+      "email": "1"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "1",
+      "kunden_id": "1",
+      "mitarbeiter_id": "1",
+      "termin": "2024-03-24T14:53:40.607Z",
+      "bemerkung": "kunde kommt immer zu spät"
+    },
+    {
+      "id": "2",
+      "kunden_id": "2",
+      "mitarbeiter_id": "1",
+      "termin": "2024-03-24T14:53:40.607Z",
+      "bemerkung": "unter vorbehalt"
+    }
+  ]
+}

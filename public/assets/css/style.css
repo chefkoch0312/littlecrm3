@@ -20,7 +20,7 @@ main {
 }
 
 .btn {
-    @apply font-bold px-2 py-1 rounded;
+    @apply font-bold px-2 py-1 rounded ;
 }
 
 .btn-blue {
@@ -29,6 +29,14 @@ main {
 
 .btn-blue:hover {
     @apply bg-blue-700;
+}
+
+.input {
+    /* @apply px-2 py-1 rounded; */
+    @apply rounded 
+}
+.input-green {
+    @apply border-solid border-2 border-green-200;
 }
 
 h1 {

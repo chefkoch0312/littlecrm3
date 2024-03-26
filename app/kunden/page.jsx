@@ -4,8 +4,8 @@ import Link from 'next/link'
 let mySearch = "";
 
 async function getData() {
+    await new Promise(resolve => setTimeout(resolve, 1000));
     // await new Promise(resolve => setTimeout(resolve, 5000));
-
     // throw new Error('Simulierter Fehler beim Abrufen der Kunden-Daten');
 
     const res = await fetch('http://localhost:4000/customer/', {
@@ -37,7 +37,7 @@ export default async function Page() {
                 <h2>Kunden-Übersicht:</h2>
                 <div className="flex">
                     <div className="mb-2 ">
-                        Suche: <input className="border-solid border-2 border-green-500" type="text" />
+                        Suche: <input className="input input-green" type="text" />
                     </div>
                     <div className="ml-5">
                         <Link className="btn btn-blue" href="/kunden/kunde/create">Neu</Link>
