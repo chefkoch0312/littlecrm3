@@ -40,94 +40,95 @@ export default function CreateForm() {
     return (
         <form onSubmit={handleSubmit} >
             <div className="columns-2 border-solid border-2 border-blue-500 p-2 w-auto inline-block">
-                <div className="border-solid border-2 border-green-500 w-80">test</div>
-                <div className="border-solid border-2 border-green-500 w-80">test</div>
-            </div>
-            <label>
-                <span>Firma:</span>
-                <input
+                <div className="border-solid border-2 border-green-500 w-80">Firma:</div>
+                <div className="border-solid border-2 border-green-500 w-80"><input
                     required
                     type="text"
                     onChange={(e) => setFirma(e.target.value)}
                     value={firma}
-                />
-            </label><br />
-            <label>
-                <span>Anrede:</span>
-                <input
+                /></div>
+            </div>
+            <div className="columns-2 border-solid border-2 border-blue-500 p-2 w-auto inline-block">
+                <div className="border-solid border-2 border-green-500 w-80">Anrede:</div>
+                <div className="border-solid border-2 border-green-500 w-80"><input
                     required
                     type="text"
                     onChange={(e) => setAnrede(e.target.value)}
                     value={anrede}
-                />
-            </label><br />
-            <label>
-                <span>Vorname:</span>
-                <input
+                /></div>
+            </div>
+            <div className="columns-2 border-solid border-2 border-blue-500 p-2 w-auto inline-block">
+                <div className="border-solid border-2 border-green-500 w-80">Vorname:</div>
+                <div className="border-solid border-2 border-green-500 w-80"><input
                     required
                     type="text"
                     onChange={(e) => setVorname(e.target.value)}
                     value={vorname}
-                />
-            </label><br />
-            <label>
-                <span>Nachname:</span>
-                <input
+                /></div>
+            </div>
+            <div className="columns-2 border-solid border-2 border-blue-500 p-2 w-auto inline-block">
+                <div className="border-solid border-2 border-green-500 w-80">Nachname:</div>
+                <div className="border-solid border-2 border-green-500 w-80"><input
                     required
                     type="text"
                     onChange={(e) => setNachname(e.target.value)}
                     value={nachname}
-                />
-            </label><br />
-            <label>
-                <span>Strasse:</span>
-                <input
+                /></div>
+            </div>
+            <div className="columns-2 border-solid border-2 border-blue-500 p-2 w-auto inline-block">
+                <div className="border-solid border-2 border-green-500 w-80">Strasse:</div>
+                <div className="border-solid border-2 border-green-500 w-80"><input
                     required
                     type="text"
                     onChange={(e) => setStrasse(e.target.value)}
                     value={strasse}
-                />
-            </label><br />
-            <label>
-                <span>PLZ:</span>
-                <input
+                /></div>
+            </div>
+            <div className="columns-2 border-solid border-2 border-blue-500 p-2 w-auto inline-block">
+                <div className="border-solid border-2 border-green-500 w-80">PLZ:</div>
+                <div className="border-solid border-2 border-green-500 w-80"><input
                     required
                     type="text"
                     onChange={(e) => setPLZ(e.target.value)}
                     value={plz}
-                />
-            </label><br />
-            <label>
-                <span>Ort:</span>
-                <input
+                /></div>
+            </div>
+            <div className="columns-2 border-solid border-2 border-blue-500 p-2 w-auto inline-block">
+                <div className="border-solid border-2 border-green-500 w-80">Ort:</div>
+                <div className="border-solid border-2 border-green-500 w-80"><input
                     required
                     type="text"
                     onChange={(e) => setOrt(e.target.value)}
                     value={ort}
-                />
-            </label><br />
-            <label>
-                <span>Tel:</span>
-                <input
+                /></div>
+            </div>
+            <div className="columns-2 border-solid border-2 border-blue-500 p-2 w-auto inline-block">
+                <div className="border-solid border-2 border-green-500 w-80">Tel:</div>
+                <div className="border-solid border-2 border-green-500 w-80"><input
                     required
                     type="text"
                     onChange={(e) => setTel(e.target.value)}
                     value={tel}
-                />
-            </label><br />
-            <label>
-                <span>Email:</span>
-                <input
+                /></div>
+            </div>
+            <div className="columns-2 border-solid border-2 border-blue-500 p-2 w-auto inline-block">
+                <div className="border-solid border-2 border-green-500 w-80">Email:</div>
+                <div className="border-solid border-2 border-green-500 w-80"><input
                     required
                     type="text"
                     onChange={(e) => setEmail(e.target.value)}
                     value={email}
-                />
-            </label><br />
-            <button className="btn btn-blue" disabled={isLoading} >
-                {isLoading && <span>Speichern...</span>}
-                {!isLoading && <span>Hinzufügen</span>}
-            </button>
-        </form>
+                /></div>
+            </div>
+
+            <div className="columns-2 border-solid border-2 border-blue-500 p-2 w-auto inline-block">
+                <div className="border-solid border-2 border-green-500 w-80">
+                    <button className="btn btn-blue" disabled={isLoading} >
+                        {isLoading && <span>Speichern...</span>}
+                        {!isLoading && <span>Hinzufügen</span>}
+                    </button>
+                </div>
+            </div>
+        </form >
     )
 }

@@ -4,7 +4,7 @@ import Link from 'next/link'
 let mySearch = "";
 
 async function getData() {
-    await new Promise(resolve => setTimeout(resolve, 5000));
+    // await new Promise(resolve => setTimeout(resolve, 5000));
 
     // throw new Error('Simulierter Fehler beim Abrufen der Kunden-Daten');
 
