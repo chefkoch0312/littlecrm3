@@ -58,6 +58,11 @@ h2 {
     grid-template-columns: repeat(10, 1fr);
     gap: 10px;
 }
+.grid-container-termine {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
 
 li.red {
     @apply text-red-500;

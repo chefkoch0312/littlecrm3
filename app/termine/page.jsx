@@ -1,4 +1,6 @@
+"use client";
 import React from 'react'
+import termineFilter from '@/public/assets/js/termineFilter';
 
 async function getData() {
     // await new Promise(resolve => setTimeout(resolve, 1000));
@@ -16,20 +18,35 @@ async function getData() {
     return res.json()
 }
 
-// export default async function page({ params: { id } }) {
-export default async function termine() {
-    console.log("komponente termine");
-    id = "efbd";
-
-    const tmpData = await getData(id);
-    console.log(tmpData);
+export default async function page(props) {
+    const tmpData = await getData(props.id);
+    const tmpData2 = termineFilter(tmpData, props.id);
+    console.log(tmpData2);
 
     return (
-        <div>
-            <main>
-                <h2>Termine für Kunde Nr.: {id}</h2>
+        <>
+            <div>
+                <h2>Termine für Kunde Nr.: {props.id}</h2>
+                <div className="grid-container-termine w-8">
+                    <div className="font-bold">ID</div>
+                    <div className="font-bold">Kunden-Nr</div>
+                    <div className="font-bold">Mitarbeiter-Nr</div>
+                    <div className="font-bold">Termin</div>
+                    <div className="font-bold">Bemerkung</div>
 
-            </main>
-        </div>
+                    {
+                        tmpData2.map((tmpData) => (
+                            <React.Fragment key={tmpData.id}>
+                                <div>{tmpData.id}</div>
+                                <div>{tmpData.kunden_id}</div>
+                                <div>{tmpData.mitarbeiter_id}</div>
+                                <div>{tmpData.termin}</div>
+                                <div>{tmpData.bemerkung}</div>
+                            </React.Fragment>
+                        ))
+                    }
+                </div>
+            </div>
+        </>
     )
 }
