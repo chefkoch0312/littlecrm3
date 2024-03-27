@@ -4,35 +4,43 @@ import { useRouter } from "next/navigation";
 import { useState, useEffect } from 'react';
 
 async function getData(id) {
-    // throw new Error('Simulierter Fehler beim Abrufen der Kunden-Daten');
     const res = await fetch('http://localhost:4000/customer/' + id);
     if (!res.ok) {
-        throw new Error('Failed to fetch data...')
+        throw new Error('Failed to fetch data...');
     }
-    return res.json()
+    return res.json();
 }
 
 export default function EditForm(props) {
     const router = useRouter();
 
     const [isLoading, setIsLoading] = useState(false);
-    const [tmpData, setTmpData] = useState(null);
+    const [id, setID] = useState('');
     const [firma, setFirma] = useState('');
     const [anrede, setAnrede] = useState('');
     const [vorname, setVorname] = useState('');
-    // const [nachname, setNachname] = useState('');
-    // const [strasse, setStrasse] = useState('');
-    // const [plz, setPLZ] = useState('');
-    // const [ort, setOrt] = useState('');
-    // const [tel, setTel] = useState('');
-    // const [email, setEmail] = useState('');
+    const [nachname, setNachname] = useState('');
+    const [strasse, setStrasse] = useState('');
+    const [plz, setPLZ] = useState('');
+    const [ort, setOrt] = useState('');
+    const [tel, setTel] = useState('');
+    const [email, setEmail] = useState('');
 
     useEffect(() => {
         const fetchData = async () => {
             setIsLoading(true);
             try {
                 const data = await getData(props.id);
-                setTmpData(data);
+                setID(data.id);
+                setFirma(data.firma);
+                setAnrede(data.anrede);
+                setVorname(data.vorname);
+                setNachname(data.nachname);
+                setStrasse(data.strasse);
+                setPLZ(data.plz);
+                setOrt(data.ort);
+                setTel(data.tel);
+                setEmail(data.email);
             } catch (error) {
                 console.error('Error fetching data:', error);
             } finally {
@@ -43,9 +51,6 @@ export default function EditForm(props) {
         fetchData();
     }, [props.id]);
 
-    console.log(tmpData);
-    setVorname("test");
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsLoading(true);
@@ -54,15 +59,17 @@ export default function EditForm(props) {
             firma, anrede, vorname, nachname, strasse, plz, ort, tel, email
         }
 
-        const res = await fetch('http://localhost:4000/customer/', {
-            method: "POST",
+        const res = await fetch(`http://localhost:4000/customer/${id}`, {
+            method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(post)
         });
-
-        if (res.status === 201) {
+        console.log(res.status);
+        if (res.status === 200) {
             router.refresh();
             router.push("/kunden");
+        } else {
+            throw new Error("Da ging was beim Update schief!");
         }
     }
 
@@ -70,10 +77,19 @@ export default function EditForm(props) {
         <form onSubmit={handleSubmit} >
             <div className="w-80">
                 <div className="columns-4 p-1 w-80 inline-block">
-                    <div className="w-56">Firma:</div>
+                    <div className="w-56">ID:</div>
                     <div className="w-80"><input
                         className="input input-green"
                         required
+                        type="text"
+                        onChange={(e) => setID(e.target.value)}
+                        value={id}
+                    /></div>
+                </div>
+                <div className="columns-4 p-1 w-80 inline-block">
+                    <div className="w-56">Firma:</div>
+                    <div className="w-80"><input
+                        className="input input-green"
                         type="text"
                         onChange={(e) => setFirma(e.target.value)}
                         value={firma}
@@ -109,7 +125,7 @@ export default function EditForm(props) {
                         value={nachname}
                     /></div>
                 </div>
-                {/* <div className="columns-4 p-1 w-80 inline-block">
+                <div className="columns-4 p-1 w-80 inline-block">
                     <div className="w-56">Strasse:</div>
                     <div className="w-80"><input
                         className="input input-green"
@@ -158,13 +174,13 @@ export default function EditForm(props) {
                         onChange={(e) => setEmail(e.target.value)}
                         value={email}
                     /></div>
-                </div> */}
+                </div>
 
                 <div className="columns-4 p-1 w-80 inline-block">
                     <div className="w-56">
                         <button className="btn btn-blue" disabled={isLoading} >
-                            {isLoading && <span>Speichern...</span>}
-                            {!isLoading && <span>Hinzufügen</span>}
+                            {isLoading && <span>wird aktualisiert...</span>}
+                            {!isLoading && <span>Aktualisieren</span>}
                         </button>
                     </div>
                 </div>

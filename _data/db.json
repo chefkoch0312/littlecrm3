@@ -19,16 +19,16 @@
   ],
   "customer": [
     {
-      "id": "1",
       "firma": "",
       "anrede": "herr",
-      "vorname": "peter",
-      "nachname": "lustig",
+      "vorname": "Peter",
+      "nachname": "Lustig",
       "strasse": "hier-str. 1",
       "plz": "12345",
       "ort": "hier",
       "tel": "12345",
-      "email": "p.lustig@locaho.st"
+      "email": "p.lustig@locaho.st",
+      "id": "1"
     },
     {
       "id": "2",
@@ -41,150 +41,6 @@
       "ort": "dort",
       "tel": "12345",
       "email": "pm@gibts.net"
-    },
-    {
-      "id": "3",
-      "firma": "firma",
-      "anrede": "",
-      "vorname": "",
-      "nachname": "",
-      "strasse": "sonst-wo 1",
-      "plz": "12480",
-      "ort": "überall",
-      "tel": "",
-      "email": "kontakt@blubb.de"
-    },
-    {
-      "id": "4",
-      "firma": "",
-      "anrede": "herr",
-      "vorname": "peter der zweite",
-      "nachname": "lustig",
-      "strasse": "hier-str. 1",
-      "plz": "12345",
-      "ort": "hier",
-      "tel": "12345",
-      "email": "p.lustig@locaho.st"
-    },
-    {
-      "id": "5",
-      "firma": "",
-      "anrede": "herr",
-      "vorname": "peter der dritte",
-      "nachname": "lustig",
-      "strasse": "hier-str. 1",
-      "plz": "12345",
-      "ort": "hier",
-      "tel": "12345",
-      "email": "p.lustig@locaho.st"
-    },
-    {
-      "id": "6",
-      "firma": "",
-      "anrede": "herr",
-      "vorname": "peter der vierte",
-      "nachname": "lustig",
-      "strasse": "hier-str. 1",
-      "plz": "12345",
-      "ort": "hier",
-      "tel": "12345",
-      "email": "p.lustig@locaho.st"
-    },
-    {
-      "id": "7",
-      "firma": "",
-      "anrede": "herr",
-      "vorname": "peter der fünfte",
-      "nachname": "lustig",
-      "strasse": "hier-str. 1",
-      "plz": "12345",
-      "ort": "hier",
-      "tel": "12345",
-      "email": "p.lustig@locaho.st"
-    },
-    {
-      "id": "8",
-      "firma": "",
-      "anrede": "frau",
-      "vorname": "petra die zweite",
-      "nachname": "musterfrau",
-      "strasse": "dort weg 2a",
-      "plz": "12345",
-      "ort": "dort",
-      "tel": "12345",
-      "email": "pm@gibts.net"
-    },
-    {
-      "id": "9",
-      "firma": "",
-      "anrede": "frau",
-      "vorname": "petra die dritte",
-      "nachname": "musterfrau",
-      "strasse": "dort weg 2a",
-      "plz": "12345",
-      "ort": "dort",
-      "tel": "12345",
-      "email": "pm@gibts.net"
-    },
-    {
-      "id": "10",
-      "firma": "",
-      "anrede": "herr",
-      "vorname": "peter der sechste",
-      "nachname": "lustig",
-      "strasse": "hier-str. 1",
-      "plz": "12345",
-      "ort": "hier",
-      "tel": "12345",
-      "email": "p.lustig@locaho.st"
-    },
-    {
-      "id": "11",
-      "firma": "",
-      "anrede": "herr",
-      "vorname": "peter",
-      "nachname": "lustig",
-      "strasse": "hier-str. 1",
-      "plz": "12345",
-      "ort": "hier",
-      "tel": "12345",
-      "email": "p.lustig@locaho.st"
-    },
-    {
-      "id": "12",
-      "firma": "",
-      "anrede": "frau",
-      "vorname": "petra die vierte",
-      "nachname": "musterfrau",
-      "strasse": "dort weg 2a",
-      "plz": "12345",
-      "ort": "dort",
-      "tel": "12345",
-      "email": "pm@gibts.net"
-    },
-    {
-      "id": "fa70",
-      "firma": "1",
-      "anrede": "1",
-      "vorname": "1",
-      "nachname": "1",
-      "strasse": "1",
-      "plz": "1",
-      "ort": "1",
-      "tel": "1",
-      "email": "1"
-    },
-    {
-      "id": "20ce",
-      "firma": "2",
-      "anrede": "2",
-      "vorname": "2",
-      "nachname": "2",
-      "strasse": "2",
-      "plz": "2",
-      "ort": "2",
-      "tel": "2",
-      "email": "2"
     }
   ],
   "appointments": [

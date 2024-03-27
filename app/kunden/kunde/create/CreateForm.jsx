@@ -44,7 +44,6 @@ export default function CreateForm() {
                     <div className="w-56">Firma:</div>
                     <div className="w-80"><input
                         className="input input-green"
-                        required
                         type="text"
                         onChange={(e) => setFirma(e.target.value)}
                         value={firma}
