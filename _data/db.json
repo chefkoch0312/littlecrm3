@@ -58,7 +58,7 @@
   "appointments": [
     {
       "id": "1",
-      "kunden_id": "b4d71",
+      "kunden_id": "b4d7",
       "mitarbeiter_id": "1",
       "termin": "2024-03-24T14:53:40.607Z",
       "bemerkung": "Komischer Kauz"

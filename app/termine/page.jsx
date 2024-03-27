@@ -21,13 +21,12 @@ async function getData() {
 export default async function page(props) {
     const tmpData = await getData(props.id);
     const tmpData2 = termineFilter(tmpData, props.id);
-    console.log(tmpData2);
+    // console.log(tmpData2);
 
     return (
         <>
-            <div>
-                <h2>Termine für Kunde Nr.: {props.id}</h2>
-                <div className="grid-container-termine w-8">
+            <div className="border-l-4 border-indigo-500">
+                <div className="grid-container-termine w-8 ml-5">
                     <div className="font-bold">ID</div>
                     <div className="font-bold">Kunden-Nr</div>
                     <div className="font-bold">Mitarbeiter-Nr</div>
