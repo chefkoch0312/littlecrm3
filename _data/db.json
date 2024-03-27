@@ -173,6 +173,18 @@
       "ort": "1",
       "tel": "1",
       "email": "1"
+    },
+    {
+      "id": "20ce",
+      "firma": "2",
+      "anrede": "2",
+      "vorname": "2",
+      "nachname": "2",
+      "strasse": "2",
+      "plz": "2",
+      "ort": "2",
+      "tel": "2",
+      "email": "2"
     }
   ],
   "appointments": [
