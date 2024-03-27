@@ -40,9 +40,11 @@ export default function ToDoListe() {
                     <li className="red">- User-Handling: Benutzer login (Read)</li>
                     <li className="red">- User-Handling: Benutzer Edit (Update) - ...bedingt Admin-Panel</li>
                     <li className="red">- User-Handling: Benutzer Löschen (Delete) - ...bedingt Admin-Panel</li>
-                    <li className="red">- Hydration-Fehler beim Schachteln von HTML-Tags korrigieren <br />&nbsp;&nbsp;(
+                    <li className="green">+ Hydration-Fehler beim Schachteln von HTML-Tags korrigieren <br />&nbsp;&nbsp;(
                         <Link href="https://nextjs.org/docs/messages/react-hydration-error" target="_blank">react-hydration-error</Link> und <Link href="https://nextjs.org/docs/app/building-your-application/optimizing/lazy-loading#skipping-ssr" target="_blank">lazy-loading#skipping-ssr</Link>
                         )</li>
+                    <li className="red">- Next.JS: Grundsystem auf Support für Typescript umstellen, jedoch bisherige Funktionen explizit in nicht-TS belassen; auch dahingehend anpassen</li>
+                    <li className="red">- Info Komponente für die Startseite erstellen, in der die Anzahl der Einträge für Kunden, User und Termine angezeigt werde</li>
                 </ul>
             </p>
 
