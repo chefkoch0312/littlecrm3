@@ -20,27 +20,27 @@
   "customer": [
     {
       "firma": "Die Peter-Lustig AG",
-      "anrede": "herr",
+      "anrede": "Herr",
       "vorname": "Peter",
       "nachname": "Lustig",
-      "strasse": "hier-str. 1",
+      "strasse": "Hier-str. 1",
       "plz": "12345",
-      "ort": "hier",
+      "ort": "Hier",
       "tel": "12345",
       "email": "p.lustig@locaho.st",
       "id": "1"
     },
     {
-      "id": "2",
       "firma": "",
-      "anrede": "frau",
-      "vorname": "petra",
-      "nachname": "musterfrau",
+      "anrede": "Frau",
+      "vorname": "Petra",
+      "nachname": "Musterfrau",
       "strasse": "dort weg 2a",
       "plz": "12345",
       "ort": "dort",
       "tel": "12345",
-      "email": "pm@gibts.net"
+      "email": "pm@gibts.net",
+      "id": "2"
     },
     {
       "firma": "Microsoft",
@@ -48,10 +48,10 @@
       "vorname": "Bill",
       "nachname": "Gates",
       "strasse": "irgendwo",
-      "plz": "666",
+      "plz": "54321",
       "ort": "sil. val.",
-      "tel": "0815",
-      "email": "topf-secret@ms.de",
+      "tel": "0815 112233",
+      "email": "topf-secret@microsoft.com",
       "id": "3675"
     }
   ],

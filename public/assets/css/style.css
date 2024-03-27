@@ -65,3 +65,6 @@ li.red {
 li.green {
     @apply text-green-500;
 }
+li.blue {
+    @apply text-blue-500;
+}

@@ -1,7 +1,9 @@
 "use client";
 
+import CustomerDelete from "@/app/components/CustomerDelete";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from 'react';
+
 
 async function getData(id) {
     const res = await fetch('http://localhost:4000/customer/' + id);
@@ -9,6 +11,10 @@ async function getData(id) {
         throw new Error('Failed to fetch data...');
     }
     return res.json();
+}
+
+function callCustomerDelete(id) {
+    alert(`Kunde mit id ${id} soll gelöscht werden`)
 }
 
 export default function EditForm(props) {
@@ -53,6 +59,7 @@ export default function EditForm(props) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log(e);
         setIsLoading(true);
 
         const post = {
@@ -72,127 +79,153 @@ export default function EditForm(props) {
             throw new Error("Fehler beim Customer-Update!");
         }
     }
+    const handleSubmitDelete = async (e) => {
+        e.preventDefault();
+        console.log("handleSubmitDelet")
+        console.log(e);
+        setIsLoading(true);
+
+        // const post = {
+        //     firma, anrede, vorname, nachname, strasse, plz, ort, tel, email
+        // }
+
+        // const res = await fetch(`http://localhost:4000/customer/${id}`, {
+        //     method: "PUT",
+        //     headers: { "Content-Type": "application/json" },
+        //     body: JSON.stringify(post)
+        // });
+        // console.log(res.status);
+        // if (res.status === 200) {
+        //     router.refresh();
+        //     router.push("/kunden");
+        // } else {
+        //     throw new Error("Fehler beim Customer-Update!");
+        // }
+    }
 
     return (
-        <form onSubmit={handleSubmit} >
-            <div className="w-80">
-                <div className="columns-4 p-1 w-80 inline-block">
-                    <div className="w-56">ID:</div>
-                    <div className="w-80"><input
-                        className="input input-green"
-                        required
-                        type="text"
-                        onChange={(e) => setID(e.target.value)}
-                        value={id}
-                    /></div>
-                </div>
-                <div className="columns-4 p-1 w-80 inline-block">
-                    <div className="w-56">Firma:</div>
-                    <div className="w-80"><input
-                        className="input input-green"
-                        type="text"
-                        onChange={(e) => setFirma(e.target.value)}
-                        value={firma}
-                    /></div>
-                </div>
-                <div className="columns-4 p-1 w-80 inline-block">
-                    <div className="w-56">Anrede:</div>
-                    <div className="w-80"><input
-                        className="input input-green"
-                        required
-                        type="text"
-                        onChange={(e) => setAnrede(e.target.value)}
-                        value={anrede}
-                    /></div>
-                </div>
-                <div className="columns-4 p-1 w-80 inline-block">
-                    <div className="w-56">Vorname:</div>
-                    <div className="w-80"><input
-                        className="input input-green"
-                        required
-                        type="text"
-                        onChange={(e) => setVorname(e.target.value)}
-                        value={vorname}
-                    /></div>
-                </div>
-                <div className="columns-4 p-1 w-80 inline-block">
-                    <div className="w-56">Nachname:</div>
-                    <div className="w-80"><input
-                        className="input input-green"
-                        required
-                        type="text"
-                        onChange={(e) => setNachname(e.target.value)}
-                        value={nachname}
-                    /></div>
-                </div>
-                <div className="columns-4 p-1 w-80 inline-block">
-                    <div className="w-56">Strasse:</div>
-                    <div className="w-80"><input
-                        className="input input-green"
-                        required
-                        type="text"
-                        onChange={(e) => setStrasse(e.target.value)}
-                        value={strasse}
-                    /></div>
-                </div>
-                <div className="columns-4 p-1 w-80 inline-block">
-                    <div className="w-56">PLZ:</div>
-                    <div className="w-80"><input
-                        className="input input-green"
-                        required
-                        type="text"
-                        onChange={(e) => setPLZ(e.target.value)}
-                        value={plz}
-                    /></div>
-                </div>
-                <div className="columns-4 p-1 w-80 inline-block">
-                    <div className="w-56">Ort:</div>
-                    <div className="w-80"><input
-                        className="input input-green"
-                        required
-                        type="text"
-                        onChange={(e) => setOrt(e.target.value)}
-                        value={ort}
-                    /></div>
-                </div>
-                <div className="columns-4 p-1 w-80 inline-block">
-                    <div className="w-56">Tel:</div>
-                    <div className="w-80"><input
-                        className="input input-green"
-                        required
-                        type="text"
-                        onChange={(e) => setTel(e.target.value)}
-                        value={tel}
-                    /></div>
-                </div>
-                <div className="columns-4 p-1 w-80 inline-block">
-                    <div className="w-56">Email:</div>
-                    <div className="w-80"><input
-                        className="input input-green"
-                        required
-                        type="text"
-                        onChange={(e) => setEmail(e.target.value)}
-                        value={email}
-                    /></div>
-                </div>
+        <>
+            <form onSubmit={handleSubmit} >
+                <div className="w-80">
+                    <div className="columns-4 p-1 w-80 inline-block">
+                        <div className="w-56">ID:</div>
+                        <div className="w-80"><input
+                            className="input input-green"
+                            required
+                            type="text"
+                            onChange={(e) => setID(e.target.value)}
+                            value={id}
+                        /></div>
+                    </div>
+                    <div className="columns-4 p-1 w-80 inline-block">
+                        <div className="w-56">Firma:</div>
+                        <div className="w-80"><input
+                            className="input input-green"
+                            type="text"
+                            onChange={(e) => setFirma(e.target.value)}
+                            value={firma}
+                        /></div>
+                    </div>
+                    <div className="columns-4 p-1 w-80 inline-block">
+                        <div className="w-56">Anrede:</div>
+                        <div className="w-80"><input
+                            className="input input-green"
+                            required
+                            type="text"
+                            onChange={(e) => setAnrede(e.target.value)}
+                            value={anrede}
+                        /></div>
+                    </div>
+                    <div className="columns-4 p-1 w-80 inline-block">
+                        <div className="w-56">Vorname:</div>
+                        <div className="w-80"><input
+                            className="input input-green"
+                            required
+                            type="text"
+                            onChange={(e) => setVorname(e.target.value)}
+                            value={vorname}
+                        /></div>
+                    </div>
+                    <div className="columns-4 p-1 w-80 inline-block">
+                        <div className="w-56">Nachname:</div>
+                        <div className="w-80"><input
+                            className="input input-green"
+                            required
+                            type="text"
+                            onChange={(e) => setNachname(e.target.value)}
+                            value={nachname}
+                        /></div>
+                    </div>
+                    <div className="columns-4 p-1 w-80 inline-block">
+                        <div className="w-56">Strasse:</div>
+                        <div className="w-80"><input
+                            className="input input-green"
+                            required
+                            type="text"
+                            onChange={(e) => setStrasse(e.target.value)}
+                            value={strasse}
+                        /></div>
+                    </div>
+                    <div className="columns-4 p-1 w-80 inline-block">
+                        <div className="w-56">PLZ:</div>
+                        <div className="w-80"><input
+                            className="input input-green"
+                            required
+                            type="text"
+                            onChange={(e) => setPLZ(e.target.value)}
+                            value={plz}
+                        /></div>
+                    </div>
+                    <div className="columns-4 p-1 w-80 inline-block">
+                        <div className="w-56">Ort:</div>
+                        <div className="w-80"><input
+                            className="input input-green"
+                            required
+                            type="text"
+                            onChange={(e) => setOrt(e.target.value)}
+                            value={ort}
+                        /></div>
+                    </div>
+                    <div className="columns-4 p-1 w-80 inline-block">
+                        <div className="w-56">Tel:</div>
+                        <div className="w-80"><input
+                            className="input input-green"
+                            required
+                            type="text"
+                            onChange={(e) => setTel(e.target.value)}
+                            value={tel}
+                        /></div>
+                    </div>
+                    <div className="columns-4 p-1 w-80 inline-block">
+                        <div className="w-56">Email:</div>
+                        <div className="w-80"><input
+                            className="input input-green"
+                            required
+                            type="text"
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
+                        /></div>
+                    </div>
 
-                <div className="columns-2 p-1 w-80 inline-block">
-                    <div className="">
-                        <button className="btn btn-blue" disabled={isLoading} >
-                            {isLoading && <span>wird aktualisiert...</span>}
-                            {!isLoading && <span>Aktualisieren</span>}
-                        </button>
-                    </div>
-                    <div className="">
-                        <button className="btn btn-red" disabled={isLoading} onClick={() => {
-                            alert("Funktion zum löschen will noch gebaut werden! Test das später. Danke für Dein Verständnis ;)");
-                        }}>
-                            {isLoading && <span>wird gelöscht...</span>}
-                            {!isLoading && <span>Löschen</span>}
-                        </button>
+                    <div className="columns-2 p-1 w-80 inline-block">
+                        <div className="">
+                            <button className="btn btn-blue" disabled={isLoading} >
+                                {isLoading && <span>wird aktualisiert...</span>}
+                                {!isLoading && <span>Aktualisieren</span>}
+                            </button>
+                        </div>
+
+                        {/* <div className="">
+                            <button className="btn btn-red" disabled={isLoading} >
+                                {isLoading && <span>wird gelöscht...</span>}
+                                {!isLoading && <span>Löschen</span>}
+                            </button>
+                        </div> */}
                     </div>
                 </div>
-            </div>
-        </form >
+            </form >
+
+
+        </>
     )
 }
