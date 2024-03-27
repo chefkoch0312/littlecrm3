@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 export default function MyNav() {
     const pathname = usePathname();
     return (
-        <nav>
+        <nav data-testid="myNav">
             <div className="flex flex-row space-x-2 pl-3 pt-2 ">
                 <ul className="flex flex-row space-x-1">
                     <li className=""><Link href="/">Home</Link></li>
