@@ -25,7 +25,7 @@ export default function ToDoListe() {
 
             <h2>ToDo & Aktueller Stand:</h2>
             <p className="pb-2">
-                <ul>
+                <ol className="list-decimal list-inside">
                     <li className="green">Next.JS: setup</li>
                     <li className="green">Installieren: JSON-Server</li>
                     <li className="green">Erstellen eines Basis-Layouts zur Darstellung</li>
@@ -53,7 +53,11 @@ export default function ToDoListe() {
                     <li className="red">Next.JS: Grundsystem auf Support für Typescript umstellen, jedoch bisherige Funktionen explizit in nicht-TS belassen; auch dahingehend anpassen</li>
                     <li className="red">Info Komponente für die Startseite erstellen, in der die Anzahl der Einträge für Kunden, User und Termine angezeigt werde</li>
                     <li className="red">Pagination</li>
-                </ul>
+                    <li className="red">Browser-Caching nach Ändern von Daten im Backend</li>
+                    <li className="yellow">Punycode-Message beim unitTest<br />(
+                        <Link href="https://github.com/yarnpkg/yarn/issues/9005" target="_blank">Thema bei Github.</Link>) Lösung wäre auf eine ältere Node-Version zurückwechseln. Inakzeptabel, Fehler wird stur ignoriert.
+                    </li>
+                </ol>
             </p>
 
         </div>

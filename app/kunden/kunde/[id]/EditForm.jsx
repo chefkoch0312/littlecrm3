@@ -1,9 +1,7 @@
 "use client";
 
-import CustomerDelete from "@/app/components/CustomerDelete";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from 'react';
-
 
 async function getData(id) {
     const res = await fetch('http://localhost:4000/customer/' + id);
@@ -85,7 +83,6 @@ export default function EditForm(props) {
         const res = await fetch(`http://localhost:4000/customer/${id}`, {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
-            // body: JSON.stringify(post)
         });
         console.log("update: ", res.status);
         if (res.status === 200) {
@@ -219,7 +216,7 @@ export default function EditForm(props) {
                         {!isLoading && <span>Löschen</span>}
                     </button>
                 </div>
-            </form>
+            </form >
 
         </>
     )

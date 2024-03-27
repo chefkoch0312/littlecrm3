@@ -55,7 +55,7 @@ h2 {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: repeat(10, 1fr);
     gap: 10px;
 }
 
@@ -67,4 +67,7 @@ li.green {
 }
 li.blue {
     @apply text-blue-500;
+}
+li.yellow {
+    @apply text-yellow-600;
 }

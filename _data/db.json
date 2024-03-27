@@ -31,7 +31,6 @@
       "id": "b4d7"
     },
     {
-      "id": "6d0d",
       "firma": "",
       "anrede": "Frau",
       "vorname": "Petra",
@@ -39,36 +38,44 @@
       "strasse": "keine ahnung. 123",
       "plz": "54321",
       "ort": "sonstwo",
-      "tel": "123",
-      "email": "pm@gibts.net"
+      "tel": "12345",
+      "email": "pm@gibts.net",
+      "id": "6d0d"
     },
     {
-      "id": "efbd",
       "firma": "Microsoft",
       "anrede": "Herr",
       "vorname": "Bill",
       "nachname": "Gates",
       "strasse": "irgendwo",
       "plz": "666",
-      "ort": "sil. val.",
+      "ort": "woanders",
       "tel": "1",
-      "email": "topf-secret@microsoft.com"
+      "email": "topf-secret@microsoft.com",
+      "id": "efbd"
     }
   ],
   "appointments": [
     {
       "id": "1",
-      "kunden_id": "1",
+      "kunden_id": "b4d71",
       "mitarbeiter_id": "1",
       "termin": "2024-03-24T14:53:40.607Z",
-      "bemerkung": "kunde kommt immer zu spät"
+      "bemerkung": "Komischer Kauz"
     },
     {
       "id": "2",
-      "kunden_id": "2",
+      "kunden_id": "efbd",
       "mitarbeiter_id": "1",
       "termin": "2024-03-24T14:53:40.607Z",
-      "bemerkung": "unter vorbehalt"
+      "bemerkung": "ohne Worte"
+    },
+    {
+      "id": "3",
+      "kunden_id": "efbd",
+      "mitarbeiter_id": "1",
+      "termin": "2024-03-24T14:53:40.607Z",
+      "bemerkung": "ohne Worte teil2"
     }
   ]
 }
