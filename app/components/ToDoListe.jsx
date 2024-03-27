@@ -18,7 +18,7 @@ export default function ToDoListe() {
 
             <h2>Notizen:</h2>
             <p className="pb-2">
-                <Link href="https://nextjs.org/docs/app/building-your-application/testing/jest" target="_blank">Infos bei nextjs.org zum Thema: "Testing"</Link><br />
+                <Link href="https://nextjs.org/docs/app/building-your-application/testing/jest" target="_blank">Infos bei nextjs.org zum Thema: &quot;Testing&quot;</Link><br />
                 Cypress als E2E test-runner funktioniert nur bis Next.JS 13. <br />
                 Jest hat eine saubere Unterstützung seit Next.JS 12, wird aber meinerseits wegen Zeitmangel in der Prüfungsphase ignoriert.
             </p>
