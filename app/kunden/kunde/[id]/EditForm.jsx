@@ -69,7 +69,7 @@ export default function EditForm(props) {
             router.refresh();
             router.push("/kunden");
         } else {
-            throw new Error("Da ging was beim Update schief!");
+            throw new Error("Fehler beim Customer-Update!");
         }
     }
 
@@ -176,11 +176,19 @@ export default function EditForm(props) {
                     /></div>
                 </div>
 
-                <div className="columns-4 p-1 w-80 inline-block">
-                    <div className="w-56">
+                <div className="columns-2 p-1 w-80 inline-block">
+                    <div className="">
                         <button className="btn btn-blue" disabled={isLoading} >
                             {isLoading && <span>wird aktualisiert...</span>}
                             {!isLoading && <span>Aktualisieren</span>}
+                        </button>
+                    </div>
+                    <div className="">
+                        <button className="btn btn-red" disabled={isLoading} onClick={() => {
+                            alert("Funktion zum löschen will noch gebaut werden! Test das später. Danke für Dein Verständnis ;)");
+                        }}>
+                            {isLoading && <span>wird gelöscht...</span>}
+                            {!isLoading && <span>Löschen</span>}
                         </button>
                     </div>
                 </div>

@@ -19,7 +19,7 @@
   ],
   "customer": [
     {
-      "firma": "",
+      "firma": "Die Peter-Lustig AG",
       "anrede": "herr",
       "vorname": "Peter",
       "nachname": "Lustig",
@@ -41,6 +41,18 @@
       "ort": "dort",
       "tel": "12345",
       "email": "pm@gibts.net"
+    },
+    {
+      "id": "3675",
+      "firma": "Microsoft",
+      "anrede": "Frau von und zu",
+      "vorname": "Billyne",
+      "nachname": "Gates",
+      "strasse": "irgendwo",
+      "plz": "666",
+      "ort": "sil. val.",
+      "tel": "0815",
+      "email": "topf-secret@ms.de"
     }
   ],
   "appointments": [

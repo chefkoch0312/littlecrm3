@@ -30,6 +30,13 @@ main {
 .btn-blue:hover {
     @apply bg-blue-700;
 }
+.btn-red {
+    @apply bg-red-500 text-white;
+}
+
+.btn-red:hover {
+    @apply bg-red-700;
+}
 
 .input {
     /* @apply px-2 py-1 rounded; */
@@ -50,4 +57,11 @@ h2 {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     gap: 10px;
+}
+
+li.red {
+    @apply text-red-500;
+}
+li.green {
+    @apply text-green-500;
 }
