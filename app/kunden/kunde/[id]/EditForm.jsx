@@ -13,10 +13,6 @@ async function getData(id) {
     return res.json();
 }
 
-function callCustomerDelete(id) {
-    alert(`Kunde mit id ${id} soll gelöscht werden`)
-}
-
 export default function EditForm(props) {
     const router = useRouter();
 
@@ -71,7 +67,7 @@ export default function EditForm(props) {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(post)
         });
-        console.log(res.status);
+        console.log("update: ", res.status);
         if (res.status === 200) {
             router.refresh();
             router.push("/kunden");
@@ -79,28 +75,25 @@ export default function EditForm(props) {
             throw new Error("Fehler beim Customer-Update!");
         }
     }
+
     const handleSubmitDelete = async (e) => {
         e.preventDefault();
         console.log("handleSubmitDelet")
         console.log(e);
         setIsLoading(true);
 
-        // const post = {
-        //     firma, anrede, vorname, nachname, strasse, plz, ort, tel, email
-        // }
-
-        // const res = await fetch(`http://localhost:4000/customer/${id}`, {
-        //     method: "PUT",
-        //     headers: { "Content-Type": "application/json" },
-        //     body: JSON.stringify(post)
-        // });
-        // console.log(res.status);
-        // if (res.status === 200) {
-        //     router.refresh();
-        //     router.push("/kunden");
-        // } else {
-        //     throw new Error("Fehler beim Customer-Update!");
-        // }
+        const res = await fetch(`http://localhost:4000/customer/${id}`, {
+            method: "DELETE",
+            headers: { "Content-Type": "application/json" },
+            // body: JSON.stringify(post)
+        });
+        console.log("update: ", res.status);
+        if (res.status === 200) {
+            router.refresh();
+            router.push("/kunden");
+        } else {
+            throw new Error("Fehler beim Customer-Delete!");
+        }
     }
 
     return (
@@ -215,16 +208,18 @@ export default function EditForm(props) {
                             </button>
                         </div>
 
-                        {/* <div className="">
-                            <button className="btn btn-red" disabled={isLoading} >
-                                {isLoading && <span>wird gelöscht...</span>}
-                                {!isLoading && <span>Löschen</span>}
-                            </button>
-                        </div> */}
                     </div>
                 </div>
             </form >
 
+            <form onSubmit={handleSubmitDelete} >
+                <div className="">
+                    <button className="btn btn-red" disabled={isLoading} >
+                        {isLoading && <span>wird gelöscht...</span>}
+                        {!isLoading && <span>Löschen</span>}
+                    </button>
+                </div>
+            </form>
 
         </>
     )

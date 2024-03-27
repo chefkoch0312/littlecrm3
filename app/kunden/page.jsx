@@ -47,6 +47,7 @@ export default async function Page() {
                 <div className="grid-container">
                     <div className="font-bold">ID</div>
                     <div className="font-bold">Firma</div>
+                    <div className="font-bold">Anrede</div>
                     <div className="font-bold">Vorname</div>
                     <div className="font-bold">Nachname</div>
                     <div className="font-bold">Strasse</div>
@@ -60,6 +61,7 @@ export default async function Page() {
                             <React.Fragment key={tmpD.id}>
                                 <Link href={`/kunden/kunde/${tmpD.id}`}><div>{tmpD.id}</div></Link>
                                 <Link href={`/kunden/kunde/${tmpD.id}`}><div>{tmpD.firma}</div></Link>
+                                <Link href={`/kunden/kunde/${tmpD.id}`}><div>{tmpD.anrede}</div></Link>
                                 <Link href={`/kunden/kunde/${tmpD.id}`}><div>{tmpD.vorname}</div></Link>
                                 <Link href={`/kunden/kunde/${tmpD.id}`}><div>{tmpD.nachname}</div></Link>
                                 <Link href={`/kunden/kunde/${tmpD.id}`}><div>{tmpD.strasse}</div></Link>

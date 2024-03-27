@@ -19,40 +19,40 @@
   ],
   "customer": [
     {
-      "firma": "Die Peter-Lustig AG",
+      "firma": "",
       "anrede": "Herr",
       "vorname": "Peter",
       "nachname": "Lustig",
-      "strasse": "Hier-str. 1",
+      "strasse": "Unbekannt-Weg 123",
       "plz": "12345",
-      "ort": "Hier",
-      "tel": "12345",
-      "email": "p.lustig@locaho.st",
-      "id": "1"
+      "ort": "IrgendwoImNirgendwo",
+      "tel": "1234567",
+      "email": "p.lustig@localho.st",
+      "id": "b4d7"
     },
     {
+      "id": "6d0d",
       "firma": "",
       "anrede": "Frau",
-      "vorname": "petra",
+      "vorname": "Petra",
       "nachname": "Musterfrau",
-      "strasse": "dort weg 2a",
-      "plz": "12345",
-      "ort": "dort",
-      "tel": "12345",
-      "email": "petra.m@gibts.net",
-      "id": "2"
+      "strasse": "keine ahnung. 123",
+      "plz": "54321",
+      "ort": "sonstwo",
+      "tel": "123",
+      "email": "pm@gibts.net"
     },
     {
+      "id": "efbd",
       "firma": "Microsoft",
       "anrede": "Herr",
       "vorname": "Bill",
       "nachname": "Gates",
       "strasse": "irgendwo",
-      "plz": "54321",
+      "plz": "666",
       "ort": "sil. val.",
-      "tel": "0815 112233",
-      "email": "topf-secret@microsoft.com",
-      "id": "3675"
+      "tel": "1",
+      "email": "topf-secret@microsoft.com"
     }
   ],
   "appointments": [
