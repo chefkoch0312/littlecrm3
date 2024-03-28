@@ -12,13 +12,13 @@ JSON-Server als Datenspeicher, der einfachen Reproduzierbarkeit während des Kur
 ## Installation
 
 ### Herunterladen
-git clone xyz
+git clone https://github.com/chefkoch0312/littlecrm3.git
+
+### Ins Projekt-Verzeichnis wechseln
+cd littlecrm3
 
 ### Initialisieren
 npm i
-
-### Verzeichnis-Wechsel
-cd xyz
 
 ### Installation des JSON-Server
 npm install json-server -g
