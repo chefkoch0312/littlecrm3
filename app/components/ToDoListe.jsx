@@ -36,11 +36,12 @@ export default function ToDoListe() {
                     <li className="green">Anzeigen aller Kunden</li>
                     <li className="green">Erstellen eines neuen Kunden (initial: nur Kunden-Datensatz)</li>
                     <li className="green">Editieren eines Kunden (initial: nur Kunden-Datensatz)</li>
-                    <li className="blue">Löschen eines Kunden (initial: nur Kunden-Datensatz)</li>
-                    <li className="red">Suchfeld in Übersicht aller Kunden</li>
+                    <li className="green">Löschen eines Kunden (initial: nur Kunden-Datensatz)</li>
+                    <li className="blue">Suchfeld in Übersicht aller Kunden</li>
                     <li className="green">loading-Site erstellen</li>
                     <li className="green">personalisierte Fehlerseiten erstellen</li>
                     <li className="red">Erstellen (kundenbezogener) Termin</li>
+                    <li className="green">Laden/Anzeigen (kundenbezogener) Termine</li>
                     <li className="red">Editieren (Kundenbezogener) Termin</li>
                     <li className="red">Löschen (kundenbezogener) Termin</li>
                     <li className="red">User-Handling: Benutzer registrieren (Create)</li>
